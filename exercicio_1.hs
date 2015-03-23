@@ -82,7 +82,7 @@ calc1 lst = map(+1) (map(*2) lst)
 func1 :: [Int] -> [Int] -> [Int]
 func1  lx ly
 	|lx == [] = []
-	|lx == [] = [] 
+	|ly == [] = [] 
 	|otherwise = map (1+) (zipWith (+) (map(*4)lx) (map(*2)ly))
 
 --Dada uma lista de strings, produzir outra lista com strings de 10 caracteres, usando o seguinte esquema: strings de entrada com mais de
