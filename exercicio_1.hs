@@ -70,9 +70,8 @@ charFound2 letra palavra
 	|otherwise = False
 	
 -- Use a função de alta ordem 'zipWith' para produzir uma função que obtenha as diferenças, par a par, dos elementos de duas listas
---subZip :: [Int] -> [Int] -> [int]
---subZip ls1 ls2 
---subZip = zipWith (+) ls1 ls2 
+subZip :: [Int] -> [Int] -> [Int]
+subZip ls1 ls2 = zipWith (-) ls1 ls2 
 
 --Dada uma lista de números, calcular 2*n+1 para cada número n contido na lista. 
 calc1 :: [Int] -> [Int]
@@ -80,14 +79,30 @@ calc1 [] = []
 calc1 lst = map(+1) (map(*2) lst)
 
 --Dadas duas listas X e Y de números inteiros, calcular 4*x+2*y+1 para cada par de números x e y pertencentes às listas
---func1 [Int] -> [Int] -> [Int]
+func1 :: [Int] -> [Int] -> [Int]
+func1  lx ly
+	|lx == [] = []
+	|lx == [] = [] 
+	|otherwise = map (1+) (zipWith (+) (map(*4)lx) (map(*2)ly))
 
 --Dada uma lista de strings, produzir outra lista com strings de 10 caracteres, usando o seguinte esquema: strings de entrada com mais de
 -- 10 caracteres são truncadas, strings com até 10 caracteres são completadas com '.' até ficarem com 10 caracteres
---func2 :: [String] -> [String]
---func2 list 
---func2 take 10 (filter ((length(list))>10) list)
 
+format :: [String] -> [String]
+format [] = []
+format l_string = map(funAux) l_string
+
+funAux :: String -> String
+funAux [] = []
+funAux p 
+	|((length p) > 10) = take 10 (p)
+	|((length p) < 10) = funAux(p++".")
+	|otherwise = p
+
+--Dada uma lista de idades, selecionar as que são maiores que 20 e, para cada uma, calcular o ano de nascimento correspondente
+anoNasc :: [Int] -> [Int]
+anoNasc [] = []
+anoNasc idade = map(2015-)(filter(>20)idade)	
 
 
 
