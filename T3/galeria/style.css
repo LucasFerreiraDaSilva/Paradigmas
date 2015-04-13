@@ -1,0 +1,69 @@
+html, body {
+ 	margin: 0px;
+ 	padding: 0px;
+ 	border: 0px;
+ }
+ #main {
+ 	margin: 5px 20px;
+ }
+ div.left {
+ 	float: none;
+ 	margin-right: 20px;
+ 	width: 100px;
+ 	margin-bottom: 30px;
+ }
+ div.left p {
+ 	text-align: center;
+ }
+ img {
+ 	border: 0px none;
+ }
+ div.center {
+ 	width: 600px;
+ } 
+ 
+.csslisting{
+clear: left;
+margin-bottom: 20px;
+}
+
+.csslisting .floatbox{
+float: left;
+background: white url(thumbback.jpg) no-repeat top left;
+width: 200px;
+}
+
+.csslisting .floatbox img{
+border: 1px solid gray;
+margin-bottom: 10px;
+}
+
+.csslisting .floatbox a:hover img{
+border-color: black;
+}
+
+.csslisting .floatbox a:hover{ /*IE fix*/
+color: gray;
+}
+ 
+* html .csslisting .floatbox{ /* IE 3px hack*/
+width: 152px
+}
+ 
+* html .csslisting p{ /* IE 3px hack*/
+height: 1%;
+}
+ 
+
+.csslisting p{
+margin-left: 225px;
+font-size: 90%;
+}
+
+* html .csslisting p{ /* IE offset to the left 3px hack*/
+margin-left: 222px;
+}
+
+.csslisting p b{
+font-size: 110%;
+}
