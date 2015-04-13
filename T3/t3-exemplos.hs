@@ -77,16 +77,3 @@ compos2 lista = map (x . y) lista
 	where
 		x = (+10)
 		y = (^2)
-
-		
-		
-		
-		
-		
-
-
-
-
-
-
-
